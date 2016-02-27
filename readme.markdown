@@ -1,8 +1,16 @@
-# arduino-starter
+# vending1.ino
 
-basic command-line script to compile and flash arduinos
+a program for the arduino inside Omni Vending Machine #1
+(that's the black one, not the brown one)
 
-# install
+https://sudoroom.org/wiki/Hack-o-mat
+
+comes with an uploader script make.sh from substack's excellent
+non-GUI arduino uploader:
+
+https://github.com/substack/arduino-starter
+
+# to upload vending1.ino to the arduino from commandline:
 
 First install the arduino and avr toolchains:
 
@@ -10,28 +18,10 @@ First install the arduino and avr toolchains:
 sudo apt-get install arduino python-pip gcc-avr avr-libc binutils-avr avrdude
 ```
 
-Mac users! If you figure out what the `brew` equivalents for the apt-gets above
-are, please share!
-
 # flash and run
 
-To flash the connected arduino with the program in `main.ino`, do:
+To flash the connected arduino with the program in `vending1.ino`, do:
 
 ```
 $ ./make.sh
-```
-
-# vendor packages
-
-Put vendor packages in `./vendor`. For example:
-
-```
-$ mkdir -p vendor/shield
-$ git clone git@github.com:adafruit/Adafruit-Motor-Shield-library.git vendor/shield
-```
-
-Then you can `#include` them like so:
-
-``` c
-#include <AFMotor.h>
 ```
