@@ -22,7 +22,7 @@ ARDUINO_PATH=$ARDUINO_ROOT/hardware/arduino/cores/arduino
 VARIANTS_PATH=$ARDUINO_ROOT/hardware/arduino/variants/standard
 
 CORE_SOURCES=`echo $ARDUINO_PATH/{main.cpp,wiring*.c,WInterrupts.c,\
-{WMath,WString,Print,HardwareSerial,IPAddress}.cpp}`
+{Stream,WMath,WString,Print,HardwareSerial,IPAddress}.cpp}`
 
 avr-c++ -o $ROOT/build/main.elf -x c++ \
   <(cat <(echo '#include <Arduino.h>') $ROOT/vending1.ino) \
