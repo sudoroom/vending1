@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # stats for the uno from http://arduino.cc/en/uploads/Main/boards.txt
-MCU=atmega168
+MCU=atmega328p
 F_CPU=16000000
-BAUD=19200
+BAUD=115200
 
 if test -n "$1"; then
   PORT=$1
